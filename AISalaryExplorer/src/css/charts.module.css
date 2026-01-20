@@ -1,0 +1,226 @@
+.chartContainer {
+  position: relative;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  border: none;
+  box-shadow: none;
+  padding-top: 4px; 
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 23px;
+  position: relative;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+.infoButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoButton:hover {
+  opacity: 0.75;
+}
+
+.infoPopup {
+  position: absolute;
+  top: 26px;
+  right: 0;
+  width: 240px;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 12px 15px;
+  border: 1px solid #000000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  animation: fadeIn 0.2s ease-out;
+  z-index: 30;
+}
+
+.infoPopup p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.35rem;
+  color: #ffffff;
+}
+
+svg {
+  display: block;
+  height: auto;
+  margin-top: -4px;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  white-space: nowrap;
+  z-index: 40;
+  transition: opacity 0.15s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.chart-legend {
+  font-size: 11px;
+}
+
+.legend text {
+  fill: #333;
+  font-weight: 500;
+}
+
+.legend rect {
+  rx: 2;
+}
+
+.chartSvg {
+  width: 100%;
+}
+
+.headerMain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.infoIcon {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.infoIcon:hover {
+  opacity: 1;
+}
+
+.yearBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #eef4ff;
+  color: #3b82f6;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid #d5e3ff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+  z-index: 40;
+  cursor: default;
+}
+
+.yearTooltip {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: #0f172a;
+  color: white;
+  padding: 10px 14px;
+  font-size: 13px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: opacity 0.15s ease;
+  z-index: 12000;
+  max-width: 220px;
+  line-height: 1.4;
+}
+
+.clearWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+.clearButtonBottom {
+  background: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clearButtonBottom:hover {
+  background: #e0f2fe;
+}
+
+.headerAligned {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.yearLeft {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #dbeafe;
+  min-width: 30px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.titleCenterSingleLine {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.placeholderRight {
+  min-width: 30px;
+  opacity: 0;
+}
+
+.chartContainer {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 9999; 
+  pointer-events: none;
+}

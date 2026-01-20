@@ -1,0 +1,300 @@
+.container {
+  width: 100%;
+  padding: 2rem 2rem 2.6rem;
+  border-radius: 14px;
+  padding-top: 1.2rem;  
+}
+
+.chartTitle {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e2a3b;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.mapDescription {
+  text-align: center;
+  color: #445;
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.mapWrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden; 
+  border-radius: 14px;
+  border: 1px solid #e6ebf2; /* borda suave */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+}
+
+.mapSvg {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.legend {
+  margin-top: 8px;
+  text-align: center;
+  color: #444;
+  font-size: 13px;
+}
+
+.zoomButtons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zoomButtons button {
+  width: 34px;
+  height: 34px;
+  background: #ffffff;
+  border: 1px solid #cdd5e0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e2a3b;
+  transition: 0.15s ease;
+}
+
+.zoomButtons button:hover {
+  background: #f3f6fc;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e2a3b;
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+.donutSvg {
+ width: 100%;
+ min-width: 300px; 
+ height: 600px;
+ display: block;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 40;
+  white-space: nowrap;
+  transition: opacity 0.15s ease-in-out;
+}
+
+
+.donutContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.donutCard {
+  flex: 1;
+  min-width: 320px; 
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.clearButton {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  background: #0f172a;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.18s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  z-index: 60; 
+}
+
+.clearButton:hover {
+  background: #111827;
+}
+
+.header, .headerSmall {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  justify-content: center;
+}
+
+.infoButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: #1e2a3b;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.infoButton:hover {
+  opacity: 1;
+}
+
+.infoPopup,
+.infoPopupSmall {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  width: 270px; 
+  
+  background: #000000d9; 
+  color: #ffffff;         
+
+  border: 1px solid #444; 
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;         
+  color: #1e2a3b;
+  text-align: center;
+
+  margin-top: 0.4rem;         
+  margin-bottom: 1.2rem;      
+}
+
+.yearSelector {
+  display: flex;
+  flex-wrap: wrap;     
+  justify-content: center;
+  gap: 8px 10px;     
+  width: 100%;
+  padding: 0 6px;     
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+
+.yearButton,
+.yearButtonSelected {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.yearButton {
+  background: #0a67b1;
+  color: white;
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+
+.yearButton:hover {
+  opacity: 1;
+}
+
+.yearButtonSelected {
+  background: #0a67b1;
+  color: white;
+  opacity: 1;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+.countryDonutOverlay {
+  position: absolute;
+  top: 50%;
+  right: 40px;        
+  transform: translateY(-50%);
+  width: 380px;      
+  z-index: 30;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.countryDonutOverlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+}
+
+.modalContent {
+  background: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  position: relative;
+  animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 26px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e2a3b;
+  margin-bottom: 18px;
+}
+
+.modalTitle span {
+  color: #2563eb;
+}

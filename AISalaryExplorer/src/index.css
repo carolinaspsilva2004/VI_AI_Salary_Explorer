@@ -1,0 +1,15 @@
+/* eslint-disable */
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-800;
+}
+
+svg {
+  overflow: visible;
+  max-width: 100%;
+  height: auto;
+}

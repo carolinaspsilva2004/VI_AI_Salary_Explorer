@@ -1,0 +1,44 @@
+.containerSalaryOverview {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainContentSalaryOverview {
+  flex: 1;
+  padding: 30px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.loadingBox {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font-size: 18px;
+}
